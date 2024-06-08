@@ -1,0 +1,311 @@
+@font-face {
+    font-family: "Inter-Bold";
+    src: url(../assets/fonts/Inter-bold.ttf);
+}
+@font-face {
+    font-family: "Inter-Medium";
+    src: url(../assets/fonts/Inter-Medium.ttf);
+}
+@font-face {
+    font-family: "Inter-Regular";
+    src: url(../assets/fonts/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter-Light";
+    src: url(../assets/fonts/Inter-Light.ttf);
+}
+@font-face {
+    font-family: "Inter-Thin";
+    src: url(../assets/fonts/Inter-Thin.ttf);
+}
+:root{
+    line-height: 1.5rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter-Regular";
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container {
+    padding: 1rem 3rem 0;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* backgrounds division */
+.bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+.bggray {
+    background-color: #616161;
+    width: 68%;
+    right: 0;
+}
+
+/* page title */
+.page-title{
+    z-index: 5;
+    position: inherit;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pageTitle{
+    z-index: 5;
+    color: #3F4254;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Inter-Regular";
+}
+.white-text{
+    color: #fff;
+}
+
+/* return button, it's in all last pages */
+.return-btn{
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 10px;
+    font-family: "Inter-Medium";
+    border: 1px solid #fff;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    width: 15rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+}
+.return-btn:hover{
+    background-color: #002452;
+}
+.btn-link{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* page content */ 
+.wrappers { 
+    position: relative; 
+    display: flex; 
+} 
+.left-wrapper { 
+    width: 31.5%; 
+    padding-right: 3rem;
+} 
+.right-wrapper { 
+    width: 68.5%; 
+} 
+.title { 
+    color: #002452; 
+    letter-spacing: 1px; 
+    padding-bottom: 1rem; 
+} 
+.explain { 
+    color: #53595f; 
+    font-size: 15px; 
+    padding: 1rem 2.5rem 1rem 0; 
+    width: 100%; 
+} 
+.result-images { 
+    /* z-index: 5; */ 
+    display: grid; 
+    gap: 10px; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+} 
+.result-image1 { 
+    grid-row-start: 1; 
+    grid-row-end: 3; 
+} 
+.result-image2 { 
+    grid-row-start: 1; 
+    grid-row-end: 2; 
+} 
+.result-image3 { 
+    grid-row-start: 2; 
+    grid-row-end: 3; 
+} 
+.result-image-image { 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    padding-left: 3rem;
+}
+.signature{
+    padding: 0.7rem 0;
+    border-top: 1px solid #EEEEEE;
+    width: 85%;
+}
+.signature > p{
+    color: #A1A5B7;
+    margin: 0;
+    font-size: 12px;
+}
+.control-btns{
+    position: fixed;
+    bottom: 0;
+    right: 3rem;
+    width: max-content;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.2rem;
+    transition: opacity 400ms ease-in-out;
+    -webkit-transition: opacity 400ms ease-in-out;
+    -moz-transition: opacity 400ms ease-in-out;
+    -ms-transition: opacity 400ms ease-in-out;
+    -o-transition: opacity 400ms ease-in-out;
+    padding: 1rem 1.5rem 0;
+    border: 2px solid #eeeeee;
+    border-bottom: none;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+}
+#nextBtn__hovered,
+#homeBtn__hovered,
+#profileBtn__hovered,
+#preBtn__hovered{
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+}
+.nextBtn:hover > #next-btn, 
+.homeBtn:hover > #home-btn,
+.profileBtn:hover > #profile-btn,
+.preBtn:hover > #pre-btn{
+    display: none;
+    cursor: pointer;
+}
+.nextBtn:hover > #nextBtn__hovered, 
+.homeBtn:hover > #homeBtn__hovered,
+.profileBtn:hover > #profileBtn__hovered,
+.preBtn:hover > #preBtn__hovered{
+    display: block;
+    opacity: 1;
+}
+
+
+
+/* responsive */
+@media only screen and (max-width: 1200px) { 
+    body { 
+      background-color: #616161; 
+    } 
+    .container { 
+      max-width: 960px; 
+      overflow: visible; 
+    } 
+    .title, 
+    .pageTitle { 
+      color: #fff; 
+    } 
+    .wrappers { 
+      flex-direction: column; 
+    } 
+    .explain { 
+      color: #fff; 
+    } 
+    .right-wrapper { 
+      width: 100%; 
+    } 
+    .left-wrapper { 
+      width: 100%; 
+    } 
+    .signature { 
+      width: 80%; 
+    } 
+    .bggray { 
+      width: 80%; 
+    } 
+} 
+   
+@media only screen and (max-width: 992px) { 
+    .container { 
+      max-width: 720px; 
+    } 
+} 
+   
+@media only screen and (max-width: 768px) { 
+    .container { 
+      max-width: 540px; 
+    } 
+    .return-btn {
+        width: 3rem;
+        height: 2rem;
+    }
+    .btn-icon, .btn-icon__hover {
+        width: 1rem;
+    }
+    .btn-link {
+        display: none;
+    }
+    .result-images { 
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-rows: repeat(4, 1fr); 
+    } 
+    .result-image1 { 
+        grid-row-start: 1; 
+        grid-row-end: 3; 
+    } 
+    .result-image2 { 
+        grid-row-start: 3; 
+        grid-row-end: 4; 
+    } 
+    .result-image3 { 
+        grid-row-start: 4; 
+        grid-row-end: 5; 
+    } 
+    .signature {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 390px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .container {
+        max-width: 100%;
+    }
+}

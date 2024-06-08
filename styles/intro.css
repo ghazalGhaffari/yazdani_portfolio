@@ -1,0 +1,281 @@
+@font-face {
+    font-family: "Inter-Bold";
+    src: url(../assets/fonts/Inter-bold.ttf);
+}
+@font-face {
+    font-family: "Inter-Medium";
+    src: url(../assets/fonts/Inter-Medium.ttf);
+}
+@font-face {
+    font-family: "Inter-Regular";
+    src: url(../assets/fonts/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter-Light";
+    src: url(../assets/fonts/Inter-Light.ttf);
+}
+@font-face {
+    font-family: "Inter-Thin";
+    src: url(../assets/fonts/Inter-Thin.ttf);
+}
+:root{
+    line-height: 1.5rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    padding: 0 15rem;
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 11rem 0;
+
+}
+.titles{
+    margin-bottom: 5.9rem;
+    letter-spacing: 3px;
+}
+#sayHi{
+    color: #163760;
+    opacity: 0.7;
+    font-family: "Inter-Regular";
+    font-size: 22.5px;
+    padding-bottom: 0.8rem;
+}
+#name{
+    color: #002452;
+    font-family: "Inter-Bold";
+    font-size: 69.07px;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+}
+#job{
+    color: #002452;
+    font-family: "Inter-Regular";
+    font-size: 25.8px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.guide-btn{
+    width: 50%;
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #002452;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    cursor: pointer;
+    transition: all 400ms ease-in;
+    -webkit-transition: all 400ms ease-in;
+    -moz-transition: all 400ms ease-in;
+    -ms-transition: all 400ms ease-in;
+    -o-transition: all 400ms ease-in;
+    letter-spacing: 2px;
+}
+.guide-btn:hover{
+    background-color: #002452;
+}
+.guide-icon, .contanct-icon{
+    padding-left: 0.5rem;
+}
+.guide{
+    text-decoration: none;
+    color: #002452;
+    display: inline-block;
+    padding: 0.5rem;
+    font-family: "Inter-Medium";
+    font-size: 14.25px;
+}
+.guide-btn:hover > .guide-icon{
+    display: none;
+}
+.guide-btn:hover > .guide{
+    color: #fff;
+    transition: all 400ms ease-in-out;
+}
+.hovered{  
+    display: none;
+}
+.guide-btn:hover > .hovered{
+    display: block;
+}
+.contact-btn{
+    width: 50%;
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #002452;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background-color: #002452;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.contact{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem;
+    font-family: "Inter-Regular";
+    font-size: 14.25px;
+}
+.profile > img{
+    width: 100%;
+}
+.control-btns{
+    width: max-content;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.2rem;
+    transition: opacity 400ms ease-in-out;
+    -webkit-transition: opacity 400ms ease-in-out;
+    -moz-transition: opacity 400ms ease-in-out;
+    -ms-transition: opacity 400ms ease-in-out;
+    -o-transition: opacity 400ms ease-in-out;
+    margin-left: 100%;
+    padding: 1rem 1.5rem 0;
+    border: 2px solid #eeeeee;
+    border-bottom: none;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+#nextBtn__hovered,
+#homeBtn__hovered,
+#profileBtn__hovered,
+#preBtn__hovered{
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+}
+.nextBtn:hover > #next-btn, 
+.homeBtn:hover > #home-btn,
+.profileBtn:hover > #profile-btn,
+.preBtn:hover > #pre-btn{
+    display: none;
+    cursor: pointer;
+}
+.nextBtn:hover > #nextBtn__hovered, 
+.homeBtn:hover > #homeBtn__hovered,
+.profileBtn:hover > #profileBtn__hovered,
+.preBtn:hover > #preBtn__hovered{
+    display: block;
+    opacity: 1;
+}
+.navigation{
+    position: fixed;
+    display: none;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: 600px;
+    line-height: 2;
+    transition: bottom 300ms ease-in-out;
+    -webkit-transition: bottom 300ms ease-in-out;
+    -moz-transition: bottom 300ms ease-in-out;
+    -ms-transition: bottom 300ms ease-in-out;
+    -o-transition: bottom 300ms ease-in-out;
+}
+.navigation.show {
+    bottom: 0;
+    display: block;
+}
+.card{
+    font-family: "Inter-Bold";
+    color: #002452;
+    max-width: 700px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.nav-options{
+    margin-bottom: 0;
+}
+
+
+/* responsive */
+@media only screen and (max-width: 1200px) {
+    .container {
+      max-width: 960px;
+    }
+}
+  
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    #name {
+        flex-wrap: nowrap;
+    }
+    .intro {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .titles {
+        margin-bottom: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    #sayHi {
+        margin: 0;
+        padding: 0;
+    }
+    .profile {
+        display: none;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .guide-btn, .contact-btn {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 390px;
+    }
+    #sayHi {
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .container {
+        max-width: 100%;
+    }
+}

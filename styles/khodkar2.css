@@ -1,0 +1,205 @@
+@font-face {
+    font-family: "Inter-Bold";
+    src: url(../assets/fonts/Inter-bold.ttf);
+}
+@font-face {
+    font-family: "Inter-Medium";
+    src: url(../assets/fonts/Inter-Medium.ttf);
+}
+@font-face {
+    font-family: "Inter-Regular";
+    src: url(../assets/fonts/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter-Light";
+    src: url(../assets/fonts/Inter-Light.ttf);
+}
+@font-face {
+    font-family: "Inter-Thin";
+    src: url(../assets/fonts/Inter-Thin.ttf);
+}
+:root{
+    line-height: 1.5rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter-Regular";
+}
+.container{
+    padding: 1rem 3rem;
+    margin: 0 auto;
+}
+
+
+.page-title{
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 1.5rem;
+}
+.pageTitle{
+    color: #3F4254;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Inter-Regular";
+}
+.cards-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+
+}
+.card-container{
+    padding: 2.5rem 5rem;
+    border-bottom: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+}
+.card-container:nth-last-child(even) {
+    border-right: none;
+}
+.card-container:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+.card-title{
+    color: #002452;
+    font-family: "Inter-Bold";
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+.card-explain{
+    color: #53595F;
+    font-size: 15px;
+    max-width: 55%;
+}
+.cards-logo{
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+
+/* footer */
+.control-btns{
+    position: fixed;
+    bottom: 0;
+    right: 3rem;
+    width: max-content;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.2rem;
+    transition: opacity 400ms ease-in-out;
+    -webkit-transition: opacity 400ms ease-in-out;
+    -moz-transition: opacity 400ms ease-in-out;
+    -ms-transition: opacity 400ms ease-in-out;
+    -o-transition: opacity 400ms ease-in-out;
+    padding: 1rem 1.5rem 0;
+    border: 2px solid #eeeeee;
+    border-bottom: none;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+}
+#nextBtn__hovered,
+#homeBtn__hovered,
+#profileBtn__hovered,
+#preBtn__hovered{
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+}
+.nextBtn:hover > #next-btn, 
+.homeBtn:hover > #home-btn,
+.profileBtn:hover > #profile-btn,
+.preBtn:hover > #pre-btn{
+    display: none;
+    cursor: pointer;
+}
+.nextBtn:hover > #nextBtn__hovered, 
+.homeBtn:hover > #homeBtn__hovered,
+.profileBtn:hover > #profileBtn__hovered,
+.preBtn:hover > #preBtn__hovered{
+    display: block;
+    opacity: 1;
+}
+
+
+
+/* responsive */
+@media only screen and (max-width: 1200px) {
+    .container {
+      max-width: 960px;
+    }
+    .cards-logo {
+        top: 42%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .cards-logo {
+        top: 44%;
+        left: 51%;
+    }
+    .card {
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .cards-logo {
+        display: none;
+    }
+    .cards-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card-container {
+        padding: 2.5rem 4rem;
+        border-right: none;
+        border-bottom: 1px solid #EEEEEE !important;
+    }
+    /* .card-container:last-child {
+        border-bottom: none !important;
+    } */
+    .card-explain {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 390px;
+    }
+    .card-container {
+        padding: 2.5rem 2rem;
+    }
+    .card{
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .container {
+        max-width: 100%;
+    }
+}

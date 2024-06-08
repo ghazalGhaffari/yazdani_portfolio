@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "Inter-Bold";
+    src: url(../assets/fonts/Inter-bold.ttf);
+}
+@font-face {
+    font-family: "Inter-Medium";
+    src: url(../assets/fonts/Inter-Medium.ttf);
+}
+@font-face {
+    font-family: "Inter-Regular";
+    src: url(../assets/fonts/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter-Light";
+    src: url(../assets/fonts/Inter-Light.ttf);
+}
+@font-face {
+    font-family: "Inter-Thin";
+    src: url(../assets/fonts/Inter-Thin.ttf);
+}
+:root{
+    line-height: 1.5rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter-Medium";
+}
+.container{
+    padding-left: 3rem;
+    margin: 0 auto;
+}
+
+.sides { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* left part */
+.left{
+    width: 100%;
+}
+.title{
+    font-family: "Inter-Regular";
+    font-size: 78px;
+    letter-spacing: 2px;
+    color: #002452;
+    margin: 2rem 0 1rem;
+    line-height: 1.1;
+}
+.title-explain{
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #3F4254;
+    margin: 3rem 0;
+}
+.line{
+    background-color: #EEEEEE;
+    height: 6px;
+    width: 51px;
+    margin: 0;
+}
+.project-explain{
+    margin-top: 3rem;
+    color: #52575E;
+    font-family: "Inter-Regular";
+    font-size: 15px;
+}
+
+
+/* footer */
+.control-btns{
+    position: fixed;
+    bottom: 0;
+    right: 3rem;
+    width: max-content;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.2rem;
+    transition: opacity 400ms ease-in-out;
+    -webkit-transition: opacity 400ms ease-in-out;
+    -moz-transition: opacity 400ms ease-in-out;
+    -ms-transition: opacity 400ms ease-in-out;
+    -o-transition: opacity 400ms ease-in-out;
+    padding: 1rem 1.5rem 0;
+    border: 2px solid #eeeeee;
+    border-bottom: none;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+}
+#nextBtn__hovered,
+#homeBtn__hovered,
+#profileBtn__hovered,
+#preBtn__hovered{
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+}
+.nextBtn:hover > #next-btn, 
+.homeBtn:hover > #home-btn,
+.profileBtn:hover > #profile-btn,
+.preBtn:hover > #pre-btn{
+    display: none;
+    cursor: pointer;
+}
+.nextBtn:hover > #nextBtn__hovered, 
+.homeBtn:hover > #homeBtn__hovered,
+.profileBtn:hover > #profileBtn__hovered,
+.preBtn:hover > #preBtn__hovered{
+    display: block;
+    opacity: 1;
+}
+
+
+/* responsive */
+@media only screen and (max-width: 1200px) {
+    .container {
+      max-width: 960px;
+    }
+}
+  
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+        padding: 0;
+    }
+    .sides {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .bgImage {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 390px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .container {
+        max-width: 100%;
+        overflow: hidden;
+        padding: 1rem;
+    }
+    .title {
+        font-size: 75px;
+    }
+    .signature {
+        display: none;
+    }
+    .control-btns {
+        right: 1rem;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>category</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./styles/intro3.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- title -->
+            <div class="page-title">
+                <h3 class="pageTitle">Explore My Design Journey</h3>
+            </div>
+    
+            <!-- text/explain -->
+            <div class="page-explain">
+                <p class="explain">Welcome to my design portfolio! </p>
+                <p class="explain">This page serves as a gateway to my creative work, where you can choose from three main categories to delve into my diverse design expertise.</p>
+                <p class="explain">Whether it's captivating UI designs, graphic design and print work, or immersive 3D creations with Blender, select a category below and embark on an exciting visual journey.</p>
+            </div>
+    
+            <!-- categories -->
+            <div class="categories">
+                <!-- UI category -->
+                <div id="uiCategory">
+                    <div class="img-container">
+                        <img src="./assets/images/design-journey/UI.png" alt="UI" class="category-img">
+                    </div>
+                    <p class="category-name">UI design</p>
+                </div>
+                <!-- graphic design category -->
+                <div id="graphicCategory">
+                    <div class="img-container">
+                        <img src="./assets/images/design-journey/graphic.png" alt="UI" class="category-img">
+                    </div>
+                    <p class="category-name">graphic design</p>
+                </div>
+                <!-- 3D category -->
+                <div id="3dCategory">
+                    <div class="img-container">
+                        <img src="./assets/images/design-journey/3D.png" alt="UI" class="category-img">
+                    </div>
+                    <p class="category-name">3D creation</p>
+                </div>
+            </div>
+    
+    
+            <!-- control btns / it'll be in all pages and work the same way -->
+            <div class="control-btns">
+                <div class="nextBtn">
+                    <img src="./assets/icons/control-btn/next-btn.svg" id="next-btn">
+                    <img src="./assets/icons/control-btn/next-btn-hover.svg" id="nextBtn__hovered">
+                </div>
+                <div class="homeBtn">
+                    <img src="./assets/icons/control-btn/home-btn.svg" id="home-btn">
+                    <img src="./assets/icons/control-btn/home-btn-hover.svg" id="homeBtn__hovered"> 
+                </div>
+                <div class="profileBtn">
+                    <img src="./assets/icons/control-btn/profile-btn.svg" id="profile-btn">
+                    <img src="./assets/icons/control-btn/profile-btn-hover.svg" id="profileBtn__hovered">
+                </div>
+                <div class="preBtn">
+                    <img src="./assets/icons/control-btn/pre-btn.svg" id="pre-btn">
+                    <img src="./assets/icons/control-btn/pre-btn-hover.svg" id="preBtn__hovered">
+                </div>
+            </div>
+    
+        </div>    
+
+
+        <script src="./scripts/refresh.js"></script>
+        <script src="./scripts/navigateWithKeys.js"></script>        
+        <script src="./scripts/uiCategory.js"></script>        
+        <script src="./scripts/graphicCategory.js"></script>        
+        <script src="./scripts/3dCategory.js"></script>  
+    </body>
+</html>

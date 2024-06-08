@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Amin Yazdani's portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles/intro.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container">
+            <!-- profile pic & help btns -->
+            <div class="intro">
+
+                <!-- left part / titles and btns -->
+                <div class="introduce">
+                    <div class="titles">
+                        <h2 id="sayHi">HELLO, I'M</h2>
+                        <h1 id="name">Amin Yazdani</h1>
+                        <h2 id="job">UI & Graphic Designer</h2>
+                    </div>
+
+                    <div class="buttons">
+                        <!-- guide btn -->
+                        <div id="guide-btn" class="guide-btn">
+                            <img src="./assets/icons/first-page/mouse-light.svg" class="guide-icon hovered">
+                            <img src="./assets/icons/first-page/mouse.svg" class="guide-icon">
+                            <a href="#" class="guide">Navigation Guide</a>
+                        </div>
+                        <!-- contact btn -->
+                        <div class="contact-btn">
+                            <img src="./assets/icons/first-page/Email.svg" class="contanct-icon">
+                            <a href="https://bento.me/aminyazdani" class="contact" target="_blank">My Contacts</a>
+                        </div>
+                    </div>
+                </div>  
+
+                <!-- right part / profile -->
+                <div class="profile">
+                    <img src="./assets/images/profile/profile.svg" alt="profile image">
+                </div>
+            </div>
+
+            <!-- control btns / it'll be in all pages and work the same way -->
+            <div class="control-btns">
+                <div class="nextBtn">
+                    <img src="./assets/icons/control-btn/next-btn.svg" id="next-btn">
+                    <img src="./assets/icons/control-btn/next-btn-hover.svg" id="nextBtn__hovered">
+                </div>
+                <div class="homeBtn">
+                    <img src="./assets/icons/control-btn/home-btn.svg" id="home-btn">
+                    <img src="./assets/icons/control-btn/home-btn-hover.svg" id="homeBtn__hovered"> 
+                </div>
+                <div class="profileBtn">
+                    <img src="./assets/icons/control-btn/profile-btn.svg" id="profile-btn">
+                    <img src="./assets/icons/control-btn/profile-btn-hover.svg" id="profileBtn__hovered">
+                </div>
+                <div class="preBtn">
+                    <img src="./assets/icons/control-btn/pre-btn.svg" id="pre-btn">
+                    <img src="./assets/icons/control-btn/pre-btn-hover.svg" id="preBtn__hovered">
+                </div>
+            </div>
+
+            <!-- navigation guide card -->
+            <div id="navigation" class="navigation">
+                <div id="card" class="card">
+                    For Better Experience In Navigating This Design Portfolio:
+                    <ul class="nav-options">
+                        <li class="nav-option">Click anywhere to go to the next page</li>
+                        <li class="nav-option">Press "R" to start from the beginning</li>
+                        <li class="nav-option">Use the arrow  Keys to navigate Easily</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="./scripts/navigationCard.js"></script>
+        <script src="./scripts/refresh.js"></script>
+        <script src="./scripts/navigateWithKeys.js"></script>   
+    </body>
+</html>
