@@ -71,12 +71,19 @@
 .img-container:hover{
     border: 7px solid #3E97FF;
 }
+.image-link {
+    display: inline-block;
+    text-decoration: none;
+}
 .category-img {
     height: auto;
     width: 100%;
     object-fit: contain;
     aspect-ratio: 1.3;
     padding: 2rem 1rem 2rem 0;
+}
+.second{
+    padding: 2rem 1rem 0.5rem 0;
 }
 .category-name{
     font-family: "Inter-Medium";

@@ -51,7 +51,7 @@
 /* page content */
 body {
     background: url(../assets/images/graphic/jco/jco5-bg.svg) no-repeat;
-    background-size: cover;
+    background-size: fill;
     height: 100dvh;
 }
 
@@ -103,9 +103,10 @@ body {
 .mid-icons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     gap: 3rem;
+    padding: 8rem;
 }
 .midIcon {
     padding: 1rem;
@@ -190,24 +191,29 @@ footer {
 }
 
 
-
 /* responsive */
 @media only screen and (max-width: 1200px) {
     .container {
       max-width: 960px;
     }
-    .mid-icons {
+    .midIcon {
+        width: 100%;
+    }
+    /* .mid-icons {
         grid-template-columns: repeat(2,1fr);
         justify-content: center;
-    }
+    } */
 }
   
 @media only screen and (max-width: 992px) {
     .container {
         max-width: 720px;
     }
+    .mid-icons {
+        padding: 5rem;
+    }
     .text {
-        width: 35%;
+        width: 15%;
     }
 }
 
@@ -215,15 +221,12 @@ footer {
     .container {
         max-width: 540px;
     }
-    .midIcon {
-        width: 85%;
+    .mid-icons {
+        padding: 1rem;
     }
-    .text {
-        font-size: 25px;
-        width: 50%;
-    }
+
 }
-@media only screen and (max-width: 576px) {
+@media (max-width: 576px) {
     .container {
         max-width: 390px;
     }
@@ -238,7 +241,25 @@ footer {
         display: none;
     }
     .mid-icons {
-        grid-template-columns: repeat(1,1fr);
+        padding: 1rem;
+    }
+    .signature {
+        display: none;
+    }
+    .text {
+        text-align: center;
+        font-size: 25px;
+        width: 60%;
+        position: absolute;
+        top: 5rem;
+        left: 20%;
+    }
+    .mid-icons {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .first {
+        padding-top: 3rem;
     }
 }
 

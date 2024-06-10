@@ -104,6 +104,8 @@
     padding: 2rem 0;
 }
 .card{
+    display: inline-block;
+    text-decoration: none;
     background-color: #fff;
     padding: 1.5rem;
     width: max-content;
